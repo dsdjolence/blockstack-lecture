@@ -54,7 +54,6 @@ class Profile extends Component {
       return person.avatarUrl()
     }
 
-    console.log(person);
     return (
         <div className="profile">
           <h1>Profile</h1>
