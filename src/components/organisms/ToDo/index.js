@@ -76,7 +76,7 @@ class Todo extends Component {
             return (
                 <tr key={index}>
                   <td>{todo.text}</td>
-                  <td>{todo.done ? 'Done' : 'Not Done'}</td>
+                  <td>{todo.done ? 'Finished' : 'Not finished'}</td>
                 </tr>
             )
           })}
