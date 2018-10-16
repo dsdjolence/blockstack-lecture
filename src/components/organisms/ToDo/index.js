@@ -97,9 +97,8 @@ class Todo extends Component {
             <input type="checkbox" checked={done}
                    onChange={this.handleCheckboxChange}/>
             <input style={{width: '100px'}} type="submit" value="Add"/>
-            <button style={{float: 'right'}} onClick={this.save}>Save List</button>
           </form>
-          <br/>
+          <button style={{margin: '20px 0'}} onClick={this.save}>Save List</button>
           {this.renderTable()}
         </div>
     )
