@@ -1,0 +1,26 @@
+.profile {
+    width: 780px;
+    margin: auto;
+}
+
+img {
+    width: 100px;
+}
+
+.profile-header {
+    text-align: center;
+}
+
+header {
+    height: 100px;
+}
+
+.page-title {
+    float: left;
+}
+
+.logout-btn {
+    float: right;
+    height: 30px;
+    margin: 25px;
+}

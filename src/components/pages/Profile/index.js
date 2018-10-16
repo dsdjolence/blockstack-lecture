@@ -57,12 +57,17 @@ class Profile extends Component {
 
     return (
         <div className="profile">
-          <h1>Profile</h1>
-          <button onClick={this.handleSignOut}>Sign out</button>
-          <div className="avatar-section">
-            <img alt={'Not found'} src={avatar()} className="avatar"/>
+          <header>
+            <h1 className={'page-title'}>Profile</h1>
+            <button className={'logout-btn'} onClick={this.handleSignOut}>Sign out</button>
+          </header>
+
+          <div className="profile-header">
+            <div className="avatar-section">
+              <img alt={'Not found'} src={avatar()} className="avatar"/>
+            </div>
+            <h1>Hello, <span id="heading-name">{name()}</span>!</h1>
           </div>
-          <h1>Hello, <span id="heading-name">{name()}</span>!</h1>
           <Todo/>
         </div>
     );
