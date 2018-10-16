@@ -1,18 +1,25 @@
-import React, { Component } from 'react';
-import './styles.css';
+import React, {Component} from 'react'
+import './styles.css'
+import {isUserSignedIn} from 'blockstack'
+import Login from '../Login'
+import Profile from '../Profile'
 
 class Home extends Component {
   constructor() {
     super()
+
+    this.state = {
+      user: {},
+    }
   }
 
   render() {
     return (
-      <div className="application">
-        <h1>Hello Blockstack!</h1>
-      </div>
-    );
+        <div className="application">
+          {isUserSignedIn() ? <Profile/> : <Login/>}
+        </div>
+    )
   }
 }
 
-export default Home;
+export default Home
