@@ -5,6 +5,7 @@ import {
   Person,
   signUserOut
 } from 'blockstack'
+import Todo from '../../organisms/ToDo'
 
 const avatarFallbackImage = 'https://s3.amazonaws.com/onename/avatar-placeholder.png'
 
@@ -62,6 +63,7 @@ class Profile extends Component {
             <img alt={'Not found'} src={avatar()} className="avatar"/>
           </div>
           <h1>Hello, <span id="heading-name">{name()}</span>!</h1>
+          <Todo/>
         </div>
     );
   }
