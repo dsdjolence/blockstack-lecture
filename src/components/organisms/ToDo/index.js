@@ -76,7 +76,7 @@ class Todo extends Component {
             return (
                 <tr key={index}>
                   <td>{todo.text}</td>
-                  <td>{todo.done ? 'Done' : 'Not Done'}</td>
+                  <td>{todo.done ? 'Finished' : 'Not finished'}</td>
                 </tr>
             )
           })}
@@ -92,13 +92,14 @@ class Todo extends Component {
           <h1>Todo list:</h1>
           <form onSubmit={this.add}>
             <label>
-              <input type="text" value={text} onChange={this.handleChange}/>
+              <input style={{width: '300px'}} type="text" value={text} onChange={this.handleChange}/>
             </label>
             <input type="checkbox" checked={done}
                    onChange={this.handleCheckboxChange}/>
-            <input type="submit" value="Add"/>
-            <button onClick={this.save}>Save List</button>
+            <input style={{width: '100px'}} type="submit" value="Add"/>
+            <button style={{float: 'right'}} onClick={this.save}>Save List</button>
           </form>
+          <br/>
           {this.renderTable()}
         </div>
     )
