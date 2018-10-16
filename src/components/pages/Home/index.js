@@ -1,15 +1,15 @@
 import React, {Component} from 'react'
 import './styles.css'
-import {isUserSignedIn} from 'blockstack'
+import {isUserSignedIn, isSignInPending, handlePendingSignIn} from 'blockstack'
 import Login from '../Login'
 import Profile from '../Profile'
 
 class Home extends Component {
-  constructor() {
-    super()
-
-    this.state = {
-      user: {},
+  componentWillMount() {
+    if (isSignInPending()) {
+      handlePendingSignIn().then(() => {
+        window.location = window.location.origin;
+      });
     }
   }
 
